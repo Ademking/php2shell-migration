@@ -1,0 +1,9 @@
+{
+  "name": "fixture/symfony-app",
+  "require": {
+    "php": ">=8.2",
+    "symfony/framework-bundle": "7.4.*",
+    "ext-ctype": "*",
+    "ext-iconv": "*"
+  }
+}

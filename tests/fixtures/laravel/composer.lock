@@ -1,0 +1,26 @@
+{
+  "_readme": [
+    "synthetic fixture"
+  ],
+  "content-hash": "00000000000000000000000000000000",
+  "packages": [
+    {
+      "name": "laravel/framework",
+      "version": "v12.70.1"
+    },
+    {
+      "name": "symfony/http-kernel",
+      "version": "v7.4.21"
+    }
+  ],
+  "packages-dev": [
+    {
+      "name": "phpunit/phpunit",
+      "version": "11.5.0"
+    }
+  ],
+  "platform": {
+    "php": "^8.2"
+  },
+  "platform-dev": {}
+}

@@ -1,0 +1,6 @@
+# Optional Codex / ChatGPT metadata (https://learn.chatgpt.com/docs/build-skills).
+# Other agents ignore this file; the skill works without it.
+interface:
+  display_name: "PHP2Shell migration"
+  short_description: "Detect, patch and verify PHP runtimes and apps affected by PHP2Shell"
+  default_prompt: "Use $php2shell-migration to check this repository for PHP2Shell and outdated PHP, then plan the remediation."

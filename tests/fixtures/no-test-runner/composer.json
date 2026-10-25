@@ -1,0 +1,7 @@
+{
+  "name": "fixture/slim-api",
+  "require": {
+    "php": "^8.3",
+    "slim/slim": "^4.14"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_readme": [
+    "synthetic fixture"
+  ],
+  "content-hash": "00000000000000000000000000000000",
+  "packages": [
+    {
+      "name": "laravel/framework",
+      "version": "v13.38.0"
+    }
+  ],
+  "packages-dev": [],
+  "platform": {
+    "php": "^8.2"
+  },
+  "platform-dev": {}
+}

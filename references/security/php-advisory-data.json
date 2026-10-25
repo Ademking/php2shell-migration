@@ -1,0 +1,38 @@
+{
+  "_comment": "Machine-readable advisory and lifecycle data consumed by scripts/check-php-version.py. Update this file (and php2shell-advisories.md / php-supported-versions.md) when php.net publishes new releases. Never edit values without a primary source.",
+  "verified_on": "2026-10-24",
+  "sources": [
+    "https://www.php.net/supported-versions.php",
+    "https://www.php.net/archive/2026.php",
+    "https://github.com/php/php-src/security/advisories/GHSA-w8hw-w9fx-j79w",
+    "https://github.com/php/php-src/security/advisories/GHSA-6wmf-4rv5-p3rp",
+    "https://cveawg.mitre.org/api/cve/CVE-2026-109618",
+    "https://cveawg.mitre.org/api/cve/CVE-2026-109619"
+  ],
+  "branches": {
+    "8.2": {"security_support_until": "2026-12-31"},
+    "8.3": {"security_support_until": "2027-12-31"},
+    "8.4": {"security_support_until": "2028-12-31"},
+    "8.5": {"security_support_until": "2029-12-31"}
+  },
+  "advisories": [
+    {
+      "id": "CVE-2026-109618",
+      "ghsa": "GHSA-w8hw-w9fx-j79w",
+      "title": "RCE via OOM corruption",
+      "published": "2026-10-21",
+      "cvss_v4": 9.2,
+      "fixed_in": {"8.2": "8.2.35", "8.3": "8.3.36", "8.4": "8.4.27", "8.5": "8.5.12"},
+      "older_branches": "No official PHP release. php.net provided minimal source-only backports for 7.4, 8.0 and 8.1; distributions/LTS vendors may ship backports. Treat <=8.1 as affected unless a vendor notice proves otherwise."
+    },
+    {
+      "id": "CVE-2026-109619",
+      "ghsa": "GHSA-6wmf-4rv5-p3rp",
+      "title": "RCE via stale global state",
+      "published": "2026-10-21",
+      "cvss_v4": 9.2,
+      "fixed_in": {"8.2": "8.2.35", "8.3": "8.3.36", "8.4": "8.4.27", "8.5": "8.5.12"},
+      "older_branches": "No official PHP release. php.net provided minimal source-only backports for 7.4, 8.0 and 8.1; distributions/LTS vendors may ship backports. Treat <=8.1 as affected unless a vendor notice proves otherwise."
+    }
+  ]
+}

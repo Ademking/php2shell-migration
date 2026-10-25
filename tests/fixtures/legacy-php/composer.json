@@ -1,0 +1,6 @@
+{
+  "name": "fixture/legacy",
+  "require": {
+    "php": ">=5.3"
+  }
+}

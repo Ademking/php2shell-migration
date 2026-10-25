@@ -1,0 +1,42 @@
+{
+  "skill": "php2shell-migration",
+  "report_version": "1.0",
+  "generated_on": null,
+  "summary": "",
+  "project": {
+    "name": "example",
+    "path": null,
+    "framework": "unknown",
+    "framework_version_before": null,
+    "framework_version_after": null,
+    "php_version_before": null,
+    "php_version_after": null
+  },
+  "security": {
+    "advisories_checked": [],
+    "runtime_patch_verified": false,
+    "web_runtime_verified": false,
+    "remaining_findings": []
+  },
+  "migration": {
+    "status": "not_started",
+    "branch": null,
+    "files_changed": [],
+    "database_changes": [],
+    "rollback_available": false,
+    "rollback_procedure": null
+  },
+  "tests": [
+    {"name": "syntax_check", "layer": "structural", "status": "not_run", "command": null, "exit_code": null, "summary": "", "evidence": []},
+    {"name": "composer_validate", "layer": "structural", "status": "not_run", "command": null, "exit_code": null, "summary": "", "evidence": []},
+    {"name": "dependency_audit", "layer": "security", "status": "not_run", "command": null, "exit_code": null, "summary": "", "evidence": []},
+    {"name": "runtime_version_check", "layer": "runtime", "status": "not_run", "command": null, "exit_code": null, "summary": "", "evidence": []},
+    {"name": "web_runtime_check", "layer": "runtime", "status": "not_run", "command": null, "exit_code": null, "summary": "", "evidence": []},
+    {"name": "static_analysis", "layer": "static_analysis", "status": "not_run", "command": null, "exit_code": null, "summary": "", "evidence": []},
+    {"name": "test_suite", "layer": "automated_tests", "status": "not_run", "command": null, "exit_code": null, "summary": "", "evidence": []},
+    {"name": "database_migrations", "layer": "regression", "status": "not_run", "command": null, "exit_code": null, "summary": "", "evidence": []},
+    {"name": "http_smoke", "layer": "runtime", "status": "not_run", "command": null, "exit_code": null, "summary": "", "evidence": []}
+  ],
+  "limitations": ["Template: nothing has been executed yet."],
+  "overall_result": "not_verified"
+}

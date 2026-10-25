@@ -1,0 +1,7 @@
+{
+  "name": "fixture/shop",
+  "require": {
+    "php": "^8.3",
+    "laravel/framework": "^13.0"
+  }
+}

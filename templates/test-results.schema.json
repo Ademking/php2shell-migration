@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "php2shell-migration/test-results.schema.json",
+  "title": "php2shell-migration test results report",
+  "description": "Structural schema. Semantic rules (R1-R14) are enforced by scripts/validate-results.py and documented in references/testing/results-report-format.md.",
+  "type": "object",
+  "required": ["skill", "project", "security", "migration", "tests", "limitations", "overall_result"],
+  "properties": {
+    "skill": {"type": "string", "enum": ["php2shell-migration"]},
+    "report_version": {"type": "string"},
+    "generated_on": {"type": ["string", "null"]},
+    "summary": {"type": "string"},
+    "project": {
+      "type": "object",
+      "required": ["name", "framework", "framework_version_before", "framework_version_after", "php_version_before", "php_version_after"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "path": {"type": ["string", "null"]},
+        "framework": {"type": "string", "minLength": 1},
+        "framework_version_before": {"type": ["string", "null"]},
+        "framework_version_after": {"type": ["string", "null"]},
+        "php_version_before": {"type": ["string", "null"]},
+        "php_version_after": {"type": ["string", "null"]}
+      }
+    },
+    "security": {
+      "type": "object",
+      "required": ["advisories_checked", "runtime_patch_verified", "web_runtime_verified", "remaining_findings"],
+      "properties": {
+        "advisories_checked": {"type": "array", "items": {"$ref": "#/$defs/advisory"}},
+        "runtime_patch_verified": {"type": "boolean"},
+        "web_runtime_verified": {"type": "boolean"},
+        "remaining_findings": {"type": "array", "items": {"$ref": "#/$defs/finding"}}
+      }
+    },
+    "migration": {
+      "type": "object",
+      "required": ["status", "files_changed", "database_changes", "rollback_available"],
+      "properties": {
+        "status": {"type": "string", "enum": ["not_started", "planned", "in_progress", "completed", "partially_completed", "failed", "rolled_back", "not_required"]},
+        "branch": {"type": ["string", "null"]},
+        "files_changed": {"type": "array", "items": {"type": "string"}},
+        "database_changes": {"type": "array", "items": {"type": "string"}},
+        "rollback_available": {"type": "boolean"},
+        "rollback_procedure": {"type": ["string", "null"]}
+      }
+    },
+    "tests": {"type": "array", "items": {"$ref": "#/$defs/test"}},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "overall_result": {"type": "string", "enum": ["verified", "partially_verified", "failed", "blocked", "not_verified"]}
+  },
+  "$defs": {
+    "advisory": {
+      "type": "object",
+      "required": ["id", "source", "result"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "source": {"type": "string", "minLength": 1},
+        "checked_on": {"type": ["string", "null"]},
+        "result": {"type": "string", "enum": ["verified", "unreachable", "not_checked"]}
+      }
+    },
+    "finding": {
+      "type": "object",
+      "required": ["id", "category", "severity", "description"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "category": {"type": "string", "enum": ["runtime_affected", "runtime_unsupported", "framework_outdated", "dependency_vulnerable", "deployment_mismatch", "status_unknown", "dependency_inconsistent", "other"]},
+        "severity": {"type": "string", "enum": ["critical", "high", "medium", "low", "info"]},
+        "description": {"type": "string", "minLength": 1}
+      }
+    },
+    "test": {
+      "type": "object",
+      "required": ["name", "status", "command", "exit_code", "summary", "evidence"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "layer": {"type": "string", "enum": ["structural", "security", "static_analysis", "automated_tests", "runtime", "regression"]},
+        "status": {"type": "string", "enum": ["passed", "failed", "skipped", "blocked", "not_run"]},
+        "command": {"type": ["string", "null"]},
+        "exit_code": {"type": ["integer", "null"]},
+        "summary": {"type": "string"},
+        "evidence": {"type": "array", "items": {"type": "string"}},
+        "limitations": {"type": "array", "items": {"type": "string"}}
+      }
+    }
+  }
+}

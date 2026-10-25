@@ -1,0 +1,7 @@
+{
+  "name": "fixture/runtime-mismatch",
+  "require": {
+    "php": ">=8.2",
+    "slim/slim": "^4.12"
+  }
+}

@@ -1,0 +1,6 @@
+services:
+  php:
+    image: php:8.4-fpm
+    environment:
+      MYSQL_PASSWORD: symfony-fixture-compose-secret
+      DATABASE_URL: mysql://app:symfony-url-secret@db:3306/app
