@@ -1,6 +1,12 @@
-# php2shell-migration
+<p align="center">
+  <img src="assets/logo.png" alt="php2shell-migration logo: the PHP shield inside update arrows, with a green check shield" width="180">
+</p>
 
-**A skill for AI coding agents that finds out whether your PHP application is exposed to PHP2Shell, fixes it safely, and tells you honestly what was and wasn't verified.**
+<h1 align="center">php2shell-migration</h1>
+
+<p align="center">
+  <strong>A skill for AI coding agents that finds out whether your PHP application is exposed to PHP2Shell, fixes it safely, and tells you honestly what was and wasn't verified.</strong>
+</p>
 
 PHP2Shell is the name for two critical PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619. They allow unauthenticated remote code execution on PHP servers that handle web requests. PHP fixed them on 2026-10-21 in **8.5.12, 8.4.27, 8.3.36 and 8.2.35**. PHP 8.1 and older get no official fix. ([php.net announcement](https://www.php.net/archive/2026.php#2026-10-21-5))
 

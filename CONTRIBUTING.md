@@ -7,6 +7,7 @@ For people changing the skill itself. Users start with [README.md](README.md).
 ```
 SKILL.md                     entry point the agents load (frontmatter + workflow)
 agents/openai.yaml           optional Codex UI metadata (other tools ignore it)
+assets/logo.png              logo (README header, Codex icon)
 references/security/         advisories (+ php-advisory-data.json), supported versions, verification, policy
 references/frameworks/       23 framework references + other-php-projects.md + framework-lifecycle.json
 references/migration/        workflow, Composer, language changes, DB, deployment/rollback, legacy

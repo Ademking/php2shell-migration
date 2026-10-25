@@ -3,4 +3,5 @@
 interface:
   display_name: "PHP2Shell migration"
   short_description: "Detect, patch and verify PHP runtimes and apps affected by PHP2Shell"
+  icon_large: "./assets/logo.png"
   default_prompt: "Use $php2shell-migration to check this repository for PHP2Shell and outdated PHP, then plan the remediation."
